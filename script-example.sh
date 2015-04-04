@@ -9,7 +9,7 @@ echo "Created .ipa for ${PRODUCT_NAME}" | ${GROWL}
 
 
 echo "Uploading .ipa to RivieraBuild" | ${GROWL}
-OUTPUT=$(/usr/bin/curl "http://beta.rivierabuild.com/upload" -F file=@"${TMP_FILE_PATH}" -F availability="${AVAILABILITY}" -F passcode="${PASSWORD}") #the password parametre is optional here
+OUTPUT=$(/usr/bin/curl "https://apps.rivierabuild.com/upload" -F file=@"${TMP_FILE_PATH}" -F availability="${AVAILABILITY}" -F passcode="${PASSWORD}") #the password parametre is optional here
 URL=$(echo $OUTPUT | python -m json.tool | sed -n -e '/"file_url":/ s/^.*"\(.*\)".*/\1/p')
 echo "Uploaded .ipa to RivieraBuild" | ${GROWL}
 
