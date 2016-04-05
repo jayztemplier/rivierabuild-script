@@ -2,6 +2,7 @@ RivieraBuild Xcode Integration
 ===================
 
 Script to automatically upload a build to Riviera Build when you archive your project.
+For more information about our API, please go to [http://api.rivierabuild.com/](http://api.rivierabuild.com/)
 
 Instruction
 ===================
